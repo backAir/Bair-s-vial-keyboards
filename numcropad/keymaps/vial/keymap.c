@@ -102,40 +102,43 @@ int x = 0;
 int y = 0;
 
 
+// if returns true then the keypress registers
 bool process_record_user(uint16_t keycode, keyrecord_t *record){
-    if(!record->event.pressed){
-        return false;
-    }
-    switch (keycode) {
-        case FR_A:
-            oled_buffer[0] = 0xFF;
-            oled_buffer[10] = 0x00;
-            oled_update_required = true;
-        break;
-        case FR_B:
-            oled_buffer[0] = 0x00;
-            oled_buffer[10] = 0xFF;
-            oled_update_required = true;
-        break;
-        case FR_C:
-            for (size_t i = 0; i < 10; i++)
-            {
-                bool in_bound = y < 128;
-                if(in_bound){
-                    write_to_oled_buffer(x,y,true);
-                    oled_update_required = true;
-                    x++;
-                    if (x >= OLED_WIDTH) {
-                        x = 0;
-                        y++;
-                    }
-                }
-            }
-        break;
-        case QK_BOOTLOADER:
-            return true;
-    }
-    return false;
+    // if(!record->event.pressed){
+    //     return false;
+    // }
+    // switch (keycode) {
+    //     case FR_A:
+    //         oled_buffer[0] = 0xFF;
+    //         oled_buffer[10] = 0x00;
+    //         oled_update_required = true;
+    //     break;
+    //     case FR_B:
+    //         oled_buffer[0] = 0x00;
+    //         oled_buffer[10] = 0xFF;
+    //         oled_update_required = true;
+    //     break;
+    //     case FR_C:
+    //         for (size_t i = 0; i < 10; i++)
+    //         {
+    //             bool in_bound = y < 128;
+    //             if(in_bound){
+    //                 write_to_oled_buffer(x,y,true);
+    //                 oled_update_required = true;
+    //                 x++;
+    //                 if (x >= OLED_WIDTH) {
+    //                     x = 0;
+    //                     y++;
+    //                 }
+    //             }
+    //         }
+    //     break;
+    //     case QK_BOOTLOADER:
+    //         return true;
+    // }
+    return true;
+    write_to_oled_buffer(x,y,true);
+
 }
 
 void matrix_scan_user(void) {
