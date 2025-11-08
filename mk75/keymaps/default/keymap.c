@@ -22,21 +22,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * │ 0 │00 │ . │Ent│
      * └───┴───┴───┴───┘
      */
-    [0] = LAYOUT_75(
-        QK_BOOTLOADER,   FR_B,  FR_C,   QK_BOOTLOADER,  FR_A,   FR_B,  FR_C,   QK_BOOTLOADER, FR_D, FR_D,
-        FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
-        FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
-        FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
-        FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
-        FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
-        FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
-        FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
-        FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
-        FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
-        FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  QK_BOOTLOADER
+    // [0] = LAYOUT_75(
+    //     QK_BOOTLOADER,   FR_B,  FR_C,   QK_BOOTLOADER,  FR_A,   FR_B,  FR_C,   QK_BOOTLOADER, FR_D, FR_D,
+    //     FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
+    //     FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
+    //     FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
+    //     FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
+    //     FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
+    //     FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
+    //     FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
+    //     FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
+    //     FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  FR_C,   FR_D, FR_D, FR_D,
+    //     FR_A,   FR_B,  FR_C,   FR_D,  FR_A,   FR_B,  QK_BOOTLOADER
 
 
-    )
+    // )
     // [0] = LAYOUT_75(
     //     TG(1),   KC_PSLS, KC_PAST, KC_PMNS,
     //     KC_P7,   KC_P8,   KC_P9,   KC_PPLS,
