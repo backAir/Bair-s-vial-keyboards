@@ -11,7 +11,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * │ A │
      * └───┘
      */
-    [0] = LAYOUT_ortho_1x1(
+    [0] = LAYOUT_pedals(
         KC_A
     )
 };
@@ -23,15 +23,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         press_counter++;
 
         uint8_t report[32] = {0};   // 33 bytes = report ID + 32 data
-        report[1] += press_counter;
-        // report[1] = 0x10; // Message type: key press
-        // report[2] = (press_counter >> 0) & 0xFF;
-        // report[3] = (press_counter >> 8) & 0xFF;
-        // report[4] = (press_counter >> 16) & 0xFF;
-        // report[5] = (press_counter >> 24) & 0xFF;
 
-        // report[6] = keycode & 0xFF;
-        // report[7] = keycode >> 8;
+        report[1] = 0x10; // Message type: key press
+        report[2] = (press_counter >> 0) & 0xFF;
+        report[3] = (press_counter >> 8) & 0xFF;
+        report[4] = (press_counter >> 16) & 0xFF;
+        report[5] = (press_counter >> 24) & 0xFF;
+
+        report[6] = keycode & 0xFF;
+        report[7] = keycode >> 8;
 
         raw_hid_send(report, 32);
     }
@@ -47,8 +47,7 @@ void keyboard_post_init_user(void) {
 }
 
 
-void raw_hid_receive_kb(uint8_t *data, uint8_t length) {
-// void raw_hid_receive(uint8_t *data, uint8_t length) {
+void raw_hid_receive(uint8_t *data, uint8_t length) {
     // Your Raw HID handler here
     // data[0..length-1]
     led_state = !led_state;

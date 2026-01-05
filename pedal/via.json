@@ -1,0 +1,14 @@
+{
+    "name": "BairFootSwitch",
+    "vendorId": "0x7C92",
+    "productId": "0x0001",
+    "matrix": {
+        "rows":1,
+        "cols":1
+    },
+    "layouts": {
+        "keymap": [
+            ["0,0"]
+        ]
+    }
+}
