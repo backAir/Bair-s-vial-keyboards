@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=vscode-file://vscode-app/c:/Users/tonyl/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html
+HostUrl=file://wsl.localhost/QMK/home/qmk/vial-qmk/keyboards/bair/trippel_pedal/keymaps/vial/messages.h

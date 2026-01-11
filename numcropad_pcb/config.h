@@ -7,7 +7,7 @@
  * Feature disable options
  *  These options are also useful to firmware size reduction.
  */
-#define VIAL_KEYBOARD_UID {0x12, 0x34, 0x56, 0x78, 0x9A, 0xBC, 0xDE, 0xF2}
+#define VIAL_KEYBOARD_UID {0x7C, 0x92, 0x7C, 0x92, 0x00, 0x03, 0x00, 0x03}
 
 #define VIAL_UNLOCK_COMBO_ROWS { 0, 3 }
 #define VIAL_UNLOCK_COMBO_COLS { 3, 3 }

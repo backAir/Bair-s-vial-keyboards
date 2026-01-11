@@ -34,13 +34,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // static uint32_t press_counter = 0;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (record->event.pressed) {
-        // press_counter++;
+    if (record->event.pressed && keycode >= 0x8000) {
+        uint8_t reply[32] = {0};
 
-        // uint8_t report[32] = {0};   // 33 bytes = report ID + 32 data
-        // report[1] += press_counter;
-
-        // raw_hid_send(report, 32);
+        if (keycode < 0x8100)
+        {
+            reply[0] = LAUNCH_PROGRAM;
+            reply[1] =  keycode - 0x8000;
+            raw_hid_send(reply, 32);
+        }
+        return false;
     }
 
     return true;
