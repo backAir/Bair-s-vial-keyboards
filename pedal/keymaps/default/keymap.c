@@ -13,6 +13,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [0] = LAYOUT_ortho_1x1(
         KC_A
+    ),
+    [1] = LAYOUT_ortho_1x1(
+        KC_B
+    ),
+    [2] = LAYOUT_ortho_1x1(
+        KC_C
+    ),
+    [3] = LAYOUT_ortho_1x1(
+        KC_D
     )
 };
 
@@ -39,25 +48,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-static bool led_state = true;
+// static bool led_state = true;
 
-void keyboard_post_init_user(void) {
-    setPinOutput(LED_PIN);
-    writePinHigh(LED_PIN); // LED off initially
-}
+// void keyboard_post_init_user(void) {
+//     setPinOutput(LED_PIN);
+//     writePinHigh(LED_PIN); // LED off initially
+// }
 
 
 void raw_hid_receive(uint8_t *data, uint8_t length) {
     // Your Raw HID handler here
     // data[0..length-1]
-    led_state = !led_state;
-    writePin(LED_PIN, led_state);
+    // led_state = !led_state;
+    // writePin(LED_PIN, led_state);
 
-    uint8_t reply[32] = {0};
+    // uint8_t reply[32] = {0};
 
-    reply[0] = 0xAA;        // response ID
-    reply[1] = data[0];    // echo command
+    // reply[0] = 0xAA;        // response ID
+    // reply[1] = data[0];    // echo command
+    #include "../../../lib/HID_layer_change.c"
 
-    raw_hid_send(reply, 32);
+    raw_hid_send(data, 32);
 }
 
