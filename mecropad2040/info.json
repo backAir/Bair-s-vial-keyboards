@@ -20,17 +20,15 @@
     "encoder": {
         "rotary": [
             { "pin_a": "GP3", "pin_b": "GP2", "resolution": 2 },
-            { "pin_a": "GP0", "pin_b": "GP1", "resolution": 2 },
-            { "pin_a": "GP28", "pin_b": "GP29", "resolution": 2 },
-            { "pin_a": "GP26", "pin_b": "GP27", "resolution": 2 }
+            { "pin_a": "GP0", "pin_b": "GP1", "resolution": 2 }
         ]
     },
     "processor": "RP2040",
     "url": "",
     "usb": {
         "device_version": "1.0.0",
-        "pid": "0x0005",
-        "vid": "0x7C92"
+        "pid": "0x0001",
+        "vid": "0xBA14"
     },
     "layouts": {
         "LAYOUT_ortho_5x4": {

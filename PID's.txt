@@ -1,0 +1,14 @@
+BA14 VID:
+- mecropad 2040: 0x0001
+- orange test board: 0x0004
+
+
+
+Not yet:
+- mecropad 10x10
+- nikolai 65 (trash kb)
+- nes
+- numcropad
+- numcropad pcb
+- pedal
+- 
