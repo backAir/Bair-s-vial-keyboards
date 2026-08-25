@@ -1,6 +1,6 @@
-# mecropad2040
+# numcropad_pcb
 
-![bair/mecropad2040](imgur.com image replace me!)
+![bair/numcropad_pcb](imgur.com image replace me!)
 
 *A short description of the keyboard/project*
 
@@ -10,12 +10,12 @@
 
 Make example for this keyboard (after setting up your build environment):
 
-    make bair/mecropad2040:default
-    or for vial: qmk compile -kb bair/mecropad2040 -km vial
+    make bair/numcropad_pcb:default
+    or for vial: qmk compile -kb bair/numcropad_pcb -km vial
 
 Flashing example for this keyboard:
 
-    make bair/mecropad2040:default:flash
+    make bair/numcropad_pcb:default:flash
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
